@@ -1,0 +1,126 @@
+{
+	"version": 2,
+	"name": "Geeetech_A10",
+	"inherits": "fdmprinter",
+	"metadata": {
+                "visible": true,
+		"author": "William",
+		"manufacturer": "Shenzhen Geeetech Technology",
+		"file_formats": "text/x-gcode",
+		"has_materials": true,
+                "has_machine_quality": true,
+                "preferred_quality_type": "normal",
+		"platform": "geeetech_a10s_platform.stl",
+		"machine_extruder_trains":
+                {
+                    "0": "Geeetech_A10_extruder_0"
+                }
+    },
+
+	"overrides": {
+		"machine_name": {
+			"default_value": "Geeetech_A10"
+		},
+		"machine_start_gcode": {
+			"default_value": "G28 ;Home\nG1 Z15.0 F6000 ;Move the platform down 15mm\nG92 E0\nG1 F200 E3\nG92 E0"
+		},
+		"machine_end_gcode": {
+			"default_value": "M104 S0;Cooling the heat end\nM140 S0;Cooling the heat bed\nG92 E1\nG1 E-1 F300\nG28 X0 Y0;Home X axis and Y axis\nM84"
+		},
+		"machine_width": {
+			"default_value": 235
+		},
+		"machine_height": {
+			"default_value": 260
+		},
+		"machine_depth": {
+			"default_value": 235
+		},
+		"machine_heated_bed": {
+			"default_value": true
+		},
+		"machine_center_is_zero": {
+			"default_value": false
+		},
+		"material_diameter": {
+			"default_value": 1.75
+		},
+		"material_bed_temperature": {
+			"default_value": 50
+		},
+		"machine_nozzle_size": {
+			"default_value": 0.4
+		},
+		"layer_height": {
+			"default_value": 0.1
+		},
+		"layer_height_0": {
+			"default_value": 0.3
+		},
+		"retraction_amount": {
+			"default_value": 4
+		},
+		"retraction_speed": {
+			"default_value": 40
+		},
+		"retraction_retract_speed": {
+			"default_value": 40
+		},
+		"retraction_prime_speed": {
+			"default_value": 40
+		},
+		"adhesion_type": {
+			"default_value": "skirt"
+		},
+		"machine_head_polygon": {
+			"default_value": [
+				[-26, 19],
+				[-26, -23],
+				[26, -23],
+				[26, 19]
+			]
+		},
+		"gantry_height": {
+			"default_value": 30
+		},
+		"machine_max_feedrate_x": {
+			"default_value": 300
+		},
+		"machine_max_feedrate_y": {
+			"default_value": 300
+		},
+		"machine_max_feedrate_z": {
+			"default_value": 7
+		},
+		"machine_max_feedrate_e": {
+			"default_value": 50
+		},
+		"machine_max_acceleration_x": {
+			"default_value": 2000
+		},
+		"machine_max_acceleration_y": {
+			"default_value": 2000
+		},
+		"machine_max_acceleration_z": {
+			"default_value": 100
+		},
+		"machine_max_acceleration_e": {
+			"default_value": 10000
+		},
+		"machine_acceleration": {
+			"default_value": 2000
+		},
+		"machine_max_jerk_xy": {
+			"default_value": 10
+		},
+		"machine_max_jerk_z": {
+			"default_value": 1
+		},
+		"machine_max_jerk_e": {
+			"default_value": 5
+		},
+		"machine_gcode_flavor": {
+			"default_value": "Marlin"
+		}
+	}
+}
